@@ -6,8 +6,8 @@
         <div class="header-line top"></div>
         <div class="header-content">
           <div class="header-left">
-            <h1 class="title">{{ newsData?.title || 'AI 闪电简讯' }}</h1>
-            <div class="title-subtitle">24 小时内最值得关注的十条 AI 新闻</div>
+            <h1 class="title">{{ newsData?.title || 'AI 闪电快讯' }}</h1>
+            <div class="title-subtitle">二十四小时内最值得关注的 AI 事件</div>
           </div>
           <div class="header-right">
             <div class="date-badge">{{ formattedDate }}</div>
@@ -234,7 +234,7 @@ onMounted(() => {
   font-size: 0.625rem;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: rgba(201, 168, 106, 0.5);
+  color: rgba(201, 168, 106, 0.85);
   margin-top: 0.125rem;
   text-transform: none;
 }
@@ -352,7 +352,7 @@ onMounted(() => {
   align-items: center;
   gap: 2rem;
   background: linear-gradient(135deg, #1A1410 0%, #44382A 100%);
-  padding: 1.25rem 1.75rem;
+  padding: 1rem 1.75rem;
   margin: 0;
   border-radius: 0 0 12px 12px;
 }
@@ -369,12 +369,12 @@ onMounted(() => {
 }
 
 .tail-qrcode-section {
-  gap: 0.625rem;
+  gap: 0.4rem;
 }
 
 .tail-divider {
   width: 1px;
-  height: 4.5rem;
+  height: 4rem;
   background: linear-gradient(180deg,
     transparent 0%,
     rgba(201, 168, 106, 0.2) 10%,
@@ -387,7 +387,7 @@ onMounted(() => {
 .logo-image {
   height: 3rem;
   width: auto;
-  margin-top: 0;
+  margin-top: 0.5rem;
 }
 
 .logo-image:hover {
@@ -395,8 +395,8 @@ onMounted(() => {
 }
 
 .qrcode-image {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 8px;
   border: 1px solid rgba(201, 168, 106, 0.25);
   box-shadow:
@@ -404,7 +404,7 @@ onMounted(() => {
     0 4px 16px rgba(0, 0, 0, 0.25),
     0 2px 4px rgba(0, 0, 0, 0.15);
   background: #FFFFFF;
-  padding: 0.3125rem;
+  padding: 0.15rem;
   transition: all 0.3s ease;
 }
 

@@ -67,6 +67,7 @@ const formattedIndex = computed(() => {
   background: linear-gradient(135deg, rgba(201, 168, 106, 0.08) 0%, rgba(184, 146, 77, 0.08) 100%);
   border-radius: 50%;
   border: 1.5px solid rgba(201, 168, 106, 0.2);
+  margin-top: -0.27rem;
 }
 
 .headline-content {
@@ -94,8 +95,8 @@ const formattedIndex = computed(() => {
 /* 快讯样式 */
 .news-item.brief {
   display: flex;
-  gap: 0.75rem;
-  margin-bottom: 1.125rem;
+  gap: 0.8rem;
+  margin-bottom: 1.35rem;
   align-items: flex-start;
 }
 
@@ -110,15 +111,15 @@ const formattedIndex = computed(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8125rem;
+  font-size: 1.25rem;
   color: #C9A86A;
   line-height: 1;
-  margin-top: 0.15rem;
+  margin-top: 0.115rem;
 }
 
 .brief-text {
   flex: 1;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: #5C5142;
   line-height: 1.65;

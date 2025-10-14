@@ -7,7 +7,7 @@
         <div class="header-content">
           <div class="header-left">
             <h1 class="title">{{ newsData?.title || 'AI 闪电简讯' }}</h1>
-            <div class="title-subtitle">AI DAILY FLASH</div>
+            <div class="title-subtitle">24 小时内最值得关注的十条 AI 新闻</div>
           </div>
           <div class="header-right">
             <div class="date-badge">{{ formattedDate }}</div>
@@ -233,10 +233,10 @@ onMounted(() => {
 .title-subtitle {
   font-size: 0.625rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.08em;
   color: rgba(201, 168, 106, 0.5);
   margin-top: 0.125rem;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .date-badge {

@@ -254,7 +254,7 @@ onMounted(() => {
 
 /* 内容区 */
 .content {
-  padding: 2rem;
+  padding: 2rem 1.75rem;
   position: relative;
 }
 
@@ -350,9 +350,9 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2rem;
   background: linear-gradient(135deg, #1A1410 0%, #44382A 100%);
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 1.75rem;
   margin: 0;
   border-radius: 0 0 12px 12px;
 }
@@ -374,12 +374,12 @@ onMounted(() => {
 
 .tail-divider {
   width: 1px;
-  height: 3rem;
+  height: 4.5rem;
   background: linear-gradient(180deg,
     transparent 0%,
-    rgba(201, 168, 106, 0.15) 20%,
-    rgba(201, 168, 106, 0.4) 50%,
-    rgba(201, 168, 106, 0.15) 80%,
+    rgba(201, 168, 106, 0.2) 10%,
+    rgba(201, 168, 106, 0.5) 50%,
+    rgba(201, 168, 106, 0.2) 90%,
     transparent 100%
   );
 }
@@ -387,7 +387,7 @@ onMounted(() => {
 .logo-image {
   height: 3rem;
   width: auto;
-  margin-top: 0.7rem;
+  margin-top: 0;
 }
 
 .logo-image:hover {
@@ -395,8 +395,8 @@ onMounted(() => {
 }
 
 .qrcode-image {
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 8px;
   border: 1px solid rgba(201, 168, 106, 0.25);
   box-shadow:
@@ -417,12 +417,12 @@ onMounted(() => {
 }
 
 .qrcode-tip {
-  font-size: 0.6875rem;
+  font-size: 0.65rem;
   font-weight: 500;
   color: rgba(230, 213, 184, 0.9);
   letter-spacing: 0.02em;
   text-align: center;
   line-height: 1.35;
-  max-width: 5.5rem;
+  max-width: 5rem;
 }
 </style>

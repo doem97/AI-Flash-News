@@ -157,7 +157,7 @@ onMounted(() => {
 
 /* 卡片容器 */
 .card-container {
-  max-width: 640px;
+  max-width: 520px;
   margin: 0 auto;
   background: #FFFFFF;
   border-radius: 12px;
@@ -171,7 +171,7 @@ onMounted(() => {
 /* 头部 */
 .header {
   background: linear-gradient(135deg, #1A1410 0%, #44382A 100%);
-  padding: 1rem 2rem;
+  padding: 1rem 1.75rem;
   position: relative;
 }
 
@@ -204,7 +204,7 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .header-left {
@@ -219,7 +219,7 @@ onMounted(() => {
 }
 
 .title {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   font-weight: 600;
   background: linear-gradient(135deg, #E6D5B8 0%, #C9A86A 50%, #B8924D 100%);
   -webkit-background-clip: text;
@@ -254,7 +254,7 @@ onMounted(() => {
 
 /* 内容区 */
 .content {
-  padding: 2rem 2.5rem;
+  padding: 2rem;
   position: relative;
 }
 
@@ -269,10 +269,10 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 500;
   color: rgba(201, 168, 106, 0.07);
-  line-height: 3.5;
+  line-height: 3.25;
   white-space: pre-wrap;
   word-spacing: 3rem;
   transform: rotate(-45deg);
@@ -303,7 +303,7 @@ onMounted(() => {
 
 .section-title::before {
   content: '';
-  width: 50px;
+  width: 40px;
   height: 1px;
   background: linear-gradient(90deg,
     transparent 0%,
@@ -315,7 +315,7 @@ onMounted(() => {
 
 .section-title::after {
   content: '';
-  width: 50px;
+  width: 40px;
   height: 1px;
   background: linear-gradient(90deg,
     rgba(184, 146, 77, 0.8) 0%,
@@ -350,9 +350,9 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2.5rem;
   background: linear-gradient(135deg, #1A1410 0%, #44382A 100%);
-  padding: 1.5rem 2.5rem;
+  padding: 1.5rem 2rem;
   margin: 0;
   border-radius: 0 0 12px 12px;
 }
@@ -395,8 +395,8 @@ onMounted(() => {
 }
 
 .qrcode-image {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 8px;
   border: 1px solid rgba(201, 168, 106, 0.25);
   box-shadow:

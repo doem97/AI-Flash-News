@@ -112,14 +112,18 @@ const formatDate = (date) => {
 const loadLatestNews = async () => {
   const today = formatDate(new Date())
 
-  try {
-    const response = await fetch(`/${today}.json`)
-    if (response.ok) {
-      newsData.value = await response.json()
-      return
+  // 尝试加载今天的数据（先从 data/ 目录，再从根目录）
+  const paths = [`/data/${today}.json`, `/${today}.json`]
+  for (const path of paths) {
+    try {
+      const response = await fetch(path)
+      if (response.ok) {
+        newsData.value = await response.json()
+        return
+      }
+    } catch (e) {
+      // 继续尝试
     }
-  } catch (e) {
-    // 继续尝试
   }
 
   // 尝试最近7天
@@ -128,14 +132,17 @@ const loadLatestNews = async () => {
     date.setDate(date.getDate() - i)
     const dateStr = formatDate(date)
 
-    try {
-      const response = await fetch(`/${dateStr}.json`)
-      if (response.ok) {
-        newsData.value = await response.json()
-        return
+    const paths = [`/data/${dateStr}.json`, `/${dateStr}.json`]
+    for (const path of paths) {
+      try {
+        const response = await fetch(path)
+        if (response.ok) {
+          newsData.value = await response.json()
+          return
+        }
+      } catch (e) {
+        // 继续
       }
-    } catch (e) {
-      // 继续
     }
   }
 

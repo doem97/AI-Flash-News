@@ -30,7 +30,15 @@ dist-ssr
 # *.txt  # Commented out - keep example TXT for reference
 !README.md
 
-# Python
+# Environment variables (kept for future use)
+.env
+.env.local
+
+# Generated data
+data/raw/          # 原始抓取数据不提交
+# data/*.json      # 可选：生成的 JSON 不提交（目前保留以便查看示例）
+
+# Python (kept for future use)
 __pycache__/
 *.py[cod]
 *.so

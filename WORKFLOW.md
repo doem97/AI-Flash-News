@@ -12,6 +12,7 @@
 | ---------------------------- | --------------------------------------------------------------- | ------ |
 | AI Breakfast                 | https://aibreakfast.beehiiv.com                                 | ⭐⭐⭐    |
 | The Neuron Daily             | https://www.theneurondaily.com                                  | ⭐⭐⭐    |
+| Ben's Bites                  | https://www.bensbites.com                                       | ⭐⭐⭐    |
 | Artificial Intelligence News | https://www.artificialintelligence-news.com                     | ⭐⭐     |
 | TechCrunch AI                | https://techcrunch.com/category/artificial-intelligence/        | ⭐⭐⭐    |
 | The Verge AI                 | https://www.theverge.com/ai-artificial-intelligence             | ⭐⭐     |

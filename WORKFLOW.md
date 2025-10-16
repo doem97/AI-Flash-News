@@ -8,19 +8,66 @@
 
 从以下网站抓取最近 24-48 小时的 AI 相关新闻：
 
-| 新闻源 | URL | 优先级 |
-|--------|-----|--------|
-| AI Breakfast | https://aibreakfast.beehiiv.com | ⭐⭐⭐ |
-| The Neuron Daily | https://www.theneurondaily.com | ⭐⭐⭐ |
-| Artificial Intelligence News | https://www.artificialintelligence-news.com | ⭐⭐ |
-| TechCrunch AI | https://techcrunch.com/category/artificial-intelligence/ | ⭐⭐⭐ |
-| The Verge AI | https://www.theverge.com/ai-artificial-intelligence | ⭐⭐ |
-| VentureBeat AI | https://venturebeat.com/category/ai/ | ⭐⭐ |
-| MIT Technology Review | https://www.technologyreview.com/topic/artificial-intelligence/ | ⭐⭐ |
-| Hacker News | https://news.ycombinator.com | ⭐⭐ |
+| 新闻源                       | URL                                                             | 优先级 |
+| ---------------------------- | --------------------------------------------------------------- | ------ |
+| AI Breakfast                 | https://aibreakfast.beehiiv.com                                 | ⭐⭐⭐    |
+| The Neuron Daily             | https://www.theneurondaily.com                                  | ⭐⭐⭐    |
+| Artificial Intelligence News | https://www.artificialintelligence-news.com                     | ⭐⭐     |
+| TechCrunch AI                | https://techcrunch.com/category/artificial-intelligence/        | ⭐⭐⭐    |
+| The Verge AI                 | https://www.theverge.com/ai-artificial-intelligence             | ⭐⭐     |
+| VentureBeat AI               | https://venturebeat.com/category/ai/                            | ⭐⭐     |
+| MIT Technology Review        | https://www.technologyreview.com/topic/artificial-intelligence/ | ⭐⭐     |
+| Hacker News                  | https://news.ycombinator.com                                    | ⭐⭐     |
+| AIBase                       | https://www.aibase.com/zh/daily                                 | ⭐⭐⭐    |
 
 **补充源（可选）：**
 - Reddit r/artificial: https://www.reddit.com/r/artificial/
+
+---
+
+## 📊 信息提取要求
+
+### 必须包含的量化信息
+
+根据新闻类型，优先提取以下具体数据：
+
+**产品发布类：**
+- **定价**：具体价格、对比数据（如「比上代便宜 50%」、「$1/$5 每百万 tokens」）
+- **性能**：benchmark 分数、速度提升倍数（如「比 M4 快 4 倍」、「SWE-bench 73.3%」）
+- **规模**：参数量、上下文窗口、分辨率/时长（如「27B 参数」、「128K 上下文」）
+- **可用性**：发布日期、支持平台、覆盖设备
+
+**技术突破类：**
+- **量化指标**：准确率、效率提升、参数规模（如「准确率达 95%」、「降低 40% 成本」）
+- **对比基准**：超越了哪个模型/方法多少（如「超越 GPT-4 10 个百分点」）
+- **应用场景**：具体解决什么问题、适用范围
+
+**投融资类：**
+- **金额**：具体数字（如「15 亿美元」、「A 轮 5000 万美元」）
+- **估值**：融资后估值（如「估值达 100 亿美元」）
+- **投资方**：lead investor、知名投资机构
+
+**政策法规类：**
+- **生效时间**：具体日期或时间范围
+- **覆盖范围**：适用地区、行业、产品类型
+- **处罚力度**：罚款金额、法律后果
+
+**行业动态类：**
+- **规模数据**：市场份额、用户数量、增长率（如「市占率达 35%」、「月活 1 亿」）
+- **时间节点**：关键里程碑、预计时间表
+
+### 写作原则
+
+- ❌ **避免模糊表述**：「大幅提升」「显著改进」「快速增长」「巨大影响」
+- ✅ **使用具体数据**：「提升 4 倍」「降低 66% 成本」「快 2.5 倍」「增长 150%」
+- ❌ **避免空洞形容**：「革命性突破」「划时代意义」「颠覆性创新」
+- ✅ **用事实说话**：「首个州级 AI 伴侣专项法规」「Flow 已创建 2.75 亿视频」
+
+### 信息完整性要求
+
+- 如果原文**缺少关键量化数据**，需在 content 中明确说明（如「具体参数未披露」）
+- 如果新闻**处于早期阶段**，需注明（如「目前处于研究阶段」「尚未进入临床」）
+- 如果信息**存在不确定性**，需标注（如「传闻」「未官方确认」）
 
 ---
 
@@ -58,9 +105,53 @@
 
 ### 重要性分级
 
-- **critical**：满足多个高分维度，行业级影响（1-3 条）
-- **high**：满足部分高分维度，赛道级影响或高话题性（3-5 条）
-- **medium**：值得关注的常规更新（2-4 条）
+**优先级排序原则：生态影响力 > 技术新颖性**
+
+#### critical 判断标准（优先级从高到低）
+
+1. **三大厂主流产品更新**
+   - OpenAI/Google/Anthropic 的核心模型发布或重大更新
+   - 理由：这些公司决定了下游生态，影响所有开发者和用户
+   - 示例：Claude Haiku 4.5、Google Veo 3.1、GPT-5
+
+2. **行业级政策法规**
+   - 首例监管、重大法规变更、影响全行业的政策
+   - 示例：加州首个 AI 伴侣监管法规、欧盟 AI 法案
+
+3. **范式转变级技术突破**
+   - 改变技术路径的创新（如 Transformer、LoRA）
+   - 必须有**明确的量化证据**证明突破性
+
+4. **主流科技巨头硬件发布**
+   - Apple/NVIDIA/AMD 等的 AI 硬件重大更新
+   - 理由：影响整个硬件生态和算力供应
+
+**注意：**
+- 每日 critical 级别控制在 **3-5 条**
+- 如果没有足够的 critical 级别新闻，宁缺毋滥
+
+#### high 判断标准
+
+- **赛道级产品发布**：影响特定细分领域（如视频生成、代码助手）
+- **重要研究突破**：已有验证但尚未大规模应用
+- **高话题性事件**：引发广泛讨论（如 AI 伦理争议、法律纠纷）
+- **大型投融资**：10 亿美元以上、或明星项目融资
+
+#### medium 判断标准
+
+- **常规产品更新**：预期内的版本迭代
+- **区域性事件**：仅影响特定地区或市场
+- **行业调研报告**：有参考价值但非突发事件
+- **中等规模投融资**：1 亿美元以下
+
+#### 降级情况（即使看起来重要也要降级）
+
+- ❌ **早期研究**（未验证、不确定性高）→ 最高 high
+  - 示例：Gemma 癌症研究（处于早期阶段，信息模糊）
+- ❌ **信息模糊**（缺少关键细节、无法验证）→ 降一级
+  - 示例：传闻、未官方确认的消息
+- ❌ **区域性事件**（非全球影响）→ 最高 medium
+  - 示例：单个国家/城市的投资计划
 
 ### 字数要求
 
